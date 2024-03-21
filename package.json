@@ -1,32 +1,16 @@
 {
-	"name": "azure-iot-tools",
-	"displayName": "Azure IoT Tools",
-	"version": "0.0.1",
-	"private": false,
-	"description": "The ultimate collection of extensions for working with Azure IoT in VS Code!",
-	"homepage": "https://github.com/CodeEditorLand/Foundation#readme",
-	"bugs": {
-		"url": "https://github.com/CodeEditorLand/Foundation/issues"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/CodeEditorLand/Foundation.git"
-	},
-	"license": "SEE LICENSE IN LICENSE",
+	"activationEvents": [
+		"*",
+		"onCommand:azure-iot-tools.showWelcomePage"
+	],
+	"aiKey": "0caaff90-cc1c-4def-b64c-3ef33615bc9b",
 	"author": {
-		"name": "Playform",
 		"email": "Hello@Playform.Cloud",
+		"name": "Playform",
 		"url": "https://playform.cloud"
 	},
-	"type": "module",
-	"main": "./out/extension",
-	"scripts": {
-		"compile": "tsc -p ./",
-		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'",
-		"tslint": "tslint -t verbose src/**/*.ts test/**/*.ts --exclude src/**/*.d.ts",
-		"version": "tsc -v",
-		"vscode:prepublish": "npm run compile",
-		"watch": "tsc -watch -p ./"
+	"bugs": {
+		"url": "https://github.com/CodeEditorLand/Foundation/issues"
 	},
 	"contributes": {
 		"commands": [
@@ -36,32 +20,48 @@
 			}
 		]
 	},
-	"activationEvents": [
-		"*",
-		"onCommand:azure-iot-tools.showWelcomePage"
-	],
 	"dependencies": {
 		"mocha": "10.3.0",
 		"semver": "7.6.0",
 		"vscode-extension-telemetry": "0.1.0",
 		"vscode-test": "1.4.1"
 	},
+	"description": "The ultimate collection of extensions for working with Azure IoT in VS Code!",
 	"devDependencies": {
 		"@types/mocha": "10.0.6",
 		"@types/node": "20.11.30",
 		"@types/semver": "7.5.8",
 		"@types/vscode": "1.87.0",
 		"typescript": "5.4.2",
-		"typescript-esbuild": "0.4.5"
+		"typescript-esbuild": ""
 	},
+	"displayName": "Azure IoT Tools",
 	"extensionPack": [
 		"vsciot-vscode.azure-iot-edge",
 		"vsciot-vscode.azure-iot-toolkit",
 		"vsciot-vscode.vscode-iot-workbench"
 	],
+	"homepage": "https://github.com/CodeEditorLand/Foundation#readme",
+	"icon": "azure-iot-tools-icon.png",
+	"license": "SEE LICENSE IN LICENSE",
+	"main": "./out/extension",
+	"name": "azure-iot-tools",
+	"private": false,
 	"publishConfig": {
 		"access": "public"
 	},
-	"icon": "azure-iot-tools-icon.png",
-	"aiKey": "0caaff90-cc1c-4def-b64c-3ef33615bc9b"
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/CodeEditorLand/Foundation.git"
+	},
+	"scripts": {
+		"compile": "tsc -p ./",
+		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'",
+		"tslint": "tslint -t verbose src/**/*.ts test/**/*.ts --exclude src/**/*.d.ts",
+		"version": "tsc -v",
+		"vscode:prepublish": "npm run compile",
+		"watch": "tsc -watch -p ./"
+	},
+	"type": "module",
+	"version": "0.0.1"
 }
