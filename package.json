@@ -42,13 +42,13 @@
 		"onCommand:azure-iot-tools.showWelcomePage"
 	],
 	"dependencies": {
-		"semver": "^5.6.0"
+		"semver": "7.6.0"
 	},
 	"devDependencies": {
 		"@playform/build": "0.0.7",
 		"@playform/document": "0.0.6",
-		"@types/node": "^8.10.25",
-		"@types/semver": "^5.5.0"
+		"@types/node": "20.12.7",
+		"@types/semver": "7.5.8"
 	},
 	"extensionPack": [
 		"vsciot-vscode.azure-iot-edge",
