@@ -53,16 +53,16 @@
     ],
     "main": "./out/extension",
     "devDependencies": {
-        "@types/mocha": "^8.2.0",
-        "@types/node": "^8.10.25",
-        "@types/semver": "^5.5.0",
-        "@types/vscode": "^1.26.0",
-        "tslint": "^5.8.0",
-        "typescript": "^2.6.1"
+        "@types/mocha": "^10.0.6",
+        "@types/node": "^20.14.5",
+        "@types/semver": "^7.5.8",
+        "@types/vscode": "^1.90.0",
+        "tslint": "^5.20.1",
+        "typescript": "^5.4.5"
     },
     "dependencies": {
-        "mocha": "^8.2.1",
-        "semver": "^5.6.0",
+        "mocha": "^10.4.0",
+        "semver": "^7.6.2",
         "vscode-extension-telemetry": "^0.1.0",
         "vscode-test": "^1.4.1"
     }
