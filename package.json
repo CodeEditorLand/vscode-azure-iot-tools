@@ -24,7 +24,7 @@
         "Extension Packs"
     ],
     "engines": {
-        "vscode": "^1.26.0"
+        "vscode": "1.26.0"
     },
     "extensionPack": [
         "vsciot-vscode.azure-iot-toolkit",
@@ -53,17 +53,17 @@
     ],
     "main": "./out/extension",
     "devDependencies": {
-        "@types/mocha": "^10.0.6",
-        "@types/node": "^20.14.5",
-        "@types/semver": "^7.5.8",
-        "@types/vscode": "^1.90.0",
-        "tslint": "^5.20.1",
-        "typescript": "^5.4.5"
+        "@types/mocha": "10.0.6",
+        "@types/node": "20.14.5",
+        "@types/semver": "7.5.8",
+        "@types/vscode": "1.90.0",
+        "tslint": "5.20.1",
+        "typescript": "5.4.5"
     },
     "dependencies": {
-        "mocha": "^10.4.0",
-        "semver": "^7.6.2",
-        "vscode-extension-telemetry": "^0.1.0",
-        "vscode-test": "^1.4.1"
+        "mocha": "10.4.0",
+        "semver": "7.6.2",
+        "vscode-extension-telemetry": "0.1.0",
+        "vscode-test": "1.4.1"
     }
 }
