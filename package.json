@@ -22,8 +22,8 @@
 	},
 	"displayName": "Azure IoT Tools",
 	"extensionPack": [
-		"vsciot-vscode.azure-iot-toolkit",
 		"vsciot-vscode.azure-iot-edge",
+		"vsciot-vscode.azure-iot-toolkit",
 		"vsciot-vscode.vscode-iot-workbench"
 	],
 	"icon": "azure-iot-tools-icon.png",
