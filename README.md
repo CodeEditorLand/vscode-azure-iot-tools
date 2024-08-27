@@ -105,7 +105,7 @@ Special thanks to [br1pro](https://github.com/br1pro) and
     Azure IoT Edge extension makes it easy to code, build, deploy, and debug
     your IoT Edge applications.
 
-## Installation
+## 🚀 Installation
 
 By installing this extension you will install all of the extensions listed
 above. Some of these extensions will have a dependency on the
