@@ -1,69 +1,36 @@
 {
-    "name": "azure-iot-tools",
-    "version": "0.3.0",
-    "publisher": "vsciot-vscode",
-    "displayName": "Azure IoT Tools",
-    "description": "The ultimate collection of extensions for working with Azure IoT in VS Code!",
-    "license": "SEE LICENSE IN LICENSE",
-    "icon": "azure-iot-tools-icon.png",
-    "aiKey": "0caaff90-cc1c-4def-b64c-3ef33615bc9b",
-    "repository": {
-        "url": "https://github.com/Microsoft/vscode-azure-iot-tools"
-    },
-    "homepage": "https://github.com/Microsoft/vscode-azure-iot-tools",
-    "bugs": {
-        "url": "https://github.com/Microsoft/vscode-azure-iot-tools/issues"
-    },
-    "keywords": [
-        "azure",
-        "iot",
-        "azure iot"
-    ],
-    "categories": [
-        "Azure",
-        "Extension Packs"
-    ],
-    "engines": {
-        "vscode": "^1.26.0"
-    },
-    "extensionPack": [
-        "vsciot-vscode.azure-iot-toolkit",
-        "vsciot-vscode.azure-iot-edge",
-        "vsciot-vscode.vscode-iot-workbench"
-    ],
-    "contributes": {
-        "commands": [
-            {
-                "command": "azure-iot-tools.showWelcomePage",
-                "title": "Azure IoT Tools: Show Welcome Page"
-            }
-        ]
-    },
-    "scripts": {
-        "vscode:prepublish": "npm run compile",
-        "compile": "tsc -p ./",
-        "watch": "tsc -watch -p ./",
-        "tslint": "tslint -t verbose src/**/*.ts test/**/*.ts --exclude src/**/*.d.ts",
-        "test": "npm run compile && node ./out/test/runTest.js",
-        "version": "tsc -v"
-    },
-    "activationEvents": [
-        "*",
-        "onCommand:azure-iot-tools.showWelcomePage"
-    ],
-    "main": "./out/extension",
-    "devDependencies": {
-        "@types/mocha": "^8.2.0",
-        "@types/node": "^8.10.25",
-        "@types/semver": "^5.5.0",
-        "@types/vscode": "^1.26.0",
-        "tslint": "^5.8.0",
-        "typescript": "^2.6.1"
-    },
-    "dependencies": {
-        "mocha": "^8.2.1",
-        "semver": "^5.6.0",
-        "vscode-extension-telemetry": "^0.1.0",
-        "vscode-test": "^1.4.1"
-    }
+	"activationEvents": [
+		"*",
+		"onCommand:azure-iot-tools.showWelcomePage"
+	],
+	"aiKey": "0caaff90-cc1c-4def-b64c-3ef33615bc9b",
+	"contributes": {
+		"commands": [
+			{
+				"command": "azure-iot-tools.showWelcomePage",
+				"title": "Azure IoT Tools: Show Welcome Page"
+			}
+		]
+	},
+	"dependencies": {
+		"semver": "^5.6.0"
+	},
+	"description": "The ultimate collection of extensions for working with Azure IoT in VS Code!",
+	"devDependencies": {
+		"@types/node": "^8.10.25",
+		"@types/semver": "^5.5.0"
+	},
+	"displayName": "Azure IoT Tools",
+	"extensionPack": [
+		"vsciot-vscode.azure-iot-toolkit",
+		"vsciot-vscode.azure-iot-edge",
+		"vsciot-vscode.vscode-iot-workbench"
+	],
+	"icon": "azure-iot-tools-icon.png",
+	"main": "./out/extension",
+	"name": "azure-iot-tools",
+	"scripts": {
+		"compile": "tsc -p ./",
+		"version": "tsc -v"
+	}
 }
