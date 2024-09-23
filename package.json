@@ -13,12 +13,12 @@
 		]
 	},
 	"dependencies": {
-		"semver": "^5.6.0"
+		"semver": "7.6.3"
 	},
 	"description": "The ultimate collection of extensions for working with Azure IoT in VS Code!",
 	"devDependencies": {
-		"@types/node": "^8.10.25",
-		"@types/semver": "^5.5.0"
+		"@types/node": "22.6.0",
+		"@types/semver": "7.5.8"
 	},
 	"displayName": "Azure IoT Tools",
 	"extensionPack": [
