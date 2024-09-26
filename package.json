@@ -1,9 +1,12 @@
 {
-	"activationEvents": [
-		"*",
-		"onCommand:azure-iot-tools.showWelcomePage"
-	],
-	"aiKey": "0caaff90-cc1c-4def-b64c-3ef33615bc9b",
+	"name": "azure-iot-tools",
+	"displayName": "Azure IoT Tools",
+	"description": "The ultimate collection of extensions for working with Azure IoT in VS Code!",
+	"main": "./out/extension",
+	"scripts": {
+		"compile": "tsc -p ./",
+		"version": "tsc -v"
+	},
 	"contributes": {
 		"commands": [
 			{
@@ -12,25 +15,22 @@
 			}
 		]
 	},
+	"activationEvents": [
+		"*",
+		"onCommand:azure-iot-tools.showWelcomePage"
+	],
 	"dependencies": {
 		"semver": "7.6.3"
 	},
-	"description": "The ultimate collection of extensions for working with Azure IoT in VS Code!",
 	"devDependencies": {
 		"@types/node": "22.6.0",
 		"@types/semver": "7.5.8"
 	},
-	"displayName": "Azure IoT Tools",
 	"extensionPack": [
-		"vsciot-vscode.azure-iot-toolkit",
 		"vsciot-vscode.azure-iot-edge",
+		"vsciot-vscode.azure-iot-toolkit",
 		"vsciot-vscode.vscode-iot-workbench"
 	],
 	"icon": "azure-iot-tools-icon.png",
-	"main": "./out/extension",
-	"name": "azure-iot-tools",
-	"scripts": {
-		"compile": "tsc -p ./",
-		"version": "tsc -v"
-	}
+	"aiKey": "0caaff90-cc1c-4def-b64c-3ef33615bc9b"
 }
