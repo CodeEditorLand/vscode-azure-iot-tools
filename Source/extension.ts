@@ -11,8 +11,10 @@ import { WelcomePage } from "./welcomePage";
 
 export function activate(context: vscode.ExtensionContext) {
 	TelemetryClient.sendEvent("extensionActivated");
+
 	const welcomePage: WelcomePage = new WelcomePage(context);
 	welcomePage.checkAndShow();
+
 	const disposable = vscode.commands.registerCommand(
 		"azure-iot-tools.showWelcomePage",
 		() => {

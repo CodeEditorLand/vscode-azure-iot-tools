@@ -38,6 +38,7 @@ export class WelcomePage {
 					retainContextWhenHidden: true,
 				},
 			);
+
 			let html = fs.readFileSync(
 				this.context.asAbsolutePath(
 					path.join("resources", "welcome", "index.html"),
@@ -59,6 +60,7 @@ export class WelcomePage {
 			this.panel.webview.html = html;
 			this.panel.onDidDispose(() => {
 				this.panel = undefined;
+
 				const duration =
 					(new Date().getTime() - startTime.getTime()) / 1000;
 				TelemetryClient.sendEvent(Constants.CloseWelcomePageEvent, {
@@ -90,6 +92,7 @@ export class WelcomePage {
 		let show = this.context.globalState.get(
 			Constants.ShowWelcomePageAfterUpdating,
 		);
+
 		if (show === undefined) {
 			this.context.globalState.update(
 				Constants.ShowWelcomePageAfterUpdating,
@@ -105,6 +108,7 @@ export class WelcomePage {
 				Constants.WelcomePageLatestVersion,
 				Constants.extensionVersion,
 			);
+
 			if (
 				!version ||
 				(semver.valid(version.toString()) &&
