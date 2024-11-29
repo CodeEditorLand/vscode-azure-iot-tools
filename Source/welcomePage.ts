@@ -19,6 +19,7 @@ export class WelcomePage {
 	public checkAndShow() {
 		if (this.needToShow()) {
 			this.show();
+
 			TelemetryClient.sendEvent(Constants.ShowWelcomePageEvent, {
 				trigger: "auto",
 			});
@@ -28,6 +29,7 @@ export class WelcomePage {
 	public show() {
 		if (!this.panel) {
 			const startTime = new Date();
+
 			this.panel = vscode.window.createWebviewPanel(
 				"welcomePage",
 				"Welcome to Azure IoT Tools",
@@ -45,6 +47,7 @@ export class WelcomePage {
 				),
 				"utf8",
 			);
+
 			html = html.replace(
 				/{{root}}/g,
 				vscode.Uri.file(this.context.asAbsolutePath("."))
@@ -55,18 +58,22 @@ export class WelcomePage {
 			const show = this.context.globalState.get(
 				Constants.ShowWelcomePageAfterUpdating,
 			);
+
 			html = html.replace("{{Checked}}", show === false ? "" : "checked");
 
 			this.panel.webview.html = html;
+
 			this.panel.onDidDispose(() => {
 				this.panel = undefined;
 
 				const duration =
 					(new Date().getTime() - startTime.getTime()) / 1000;
+
 				TelemetryClient.sendEvent(Constants.CloseWelcomePageEvent, {
 					duration: duration.toString(),
 				});
 			});
+
 			this.panel.webview.onDidReceiveMessage((message) => {
 				if (message.href) {
 					TelemetryClient.sendEvent(Constants.LinkClickEvent, {
@@ -98,12 +105,15 @@ export class WelcomePage {
 				Constants.ShowWelcomePageAfterUpdating,
 				true,
 			);
+
 			show = true;
 		}
+
 		if (show) {
 			const version = this.context.globalState.get(
 				Constants.WelcomePageLatestVersion,
 			);
+
 			this.context.globalState.update(
 				Constants.WelcomePageLatestVersion,
 				Constants.extensionVersion,

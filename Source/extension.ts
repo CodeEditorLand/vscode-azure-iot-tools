@@ -13,6 +13,7 @@ export function activate(context: vscode.ExtensionContext) {
 	TelemetryClient.sendEvent("extensionActivated");
 
 	const welcomePage: WelcomePage = new WelcomePage(context);
+
 	welcomePage.checkAndShow();
 
 	const disposable = vscode.commands.registerCommand(
@@ -21,8 +22,10 @@ export function activate(context: vscode.ExtensionContext) {
 			TelemetryClient.sendEvent(Constants.ShowWelcomePageEvent, {
 				trigger: "manual",
 			});
+
 			welcomePage.show();
 		},
 	);
+
 	context.subscriptions.push(disposable);
 }
