@@ -20,10 +20,10 @@
 		"onCommand:azure-iot-tools.showWelcomePage"
 	],
 	"dependencies": {
-		"semver": "7.7.0"
+		"semver": "7.7.1"
 	},
 	"devDependencies": {
-		"@types/node": "22.13.0",
+		"@types/node": "22.13.1",
 		"@types/semver": "7.5.8"
 	},
 	"extensionPack": [
